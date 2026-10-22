@@ -1,0 +1,4 @@
+*.v8i
+*.log
+ConfigDumpInfo.xml
+.DS_Store
