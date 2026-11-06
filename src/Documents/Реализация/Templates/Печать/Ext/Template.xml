@@ -288,10 +288,40 @@
 			</c>
 		</row>
 	</rowsItem>
+	<rowsItem>
+		<index>12</index>
+		<row>
+			<c>
+				<i>1</i>
+				<c>
+					<f>0</f>
+					<tl/>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+					<tl/>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>13</index>
+		<row>
+			<c>
+				<i>2</i>
+				<c>
+					<f>0</f>
+					<tl/>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
 	<templateMode>true</templateMode>
 	<defaultFormatIndex>18</defaultFormatIndex>
-	<height>12</height>
-	<vgRows>12</vgRows>
+	<height>14</height>
+	<vgRows>14</vgRows>
 	<merge>
 		<r>4</r>
 		<c>2</c>

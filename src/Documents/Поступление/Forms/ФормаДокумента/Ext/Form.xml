@@ -82,6 +82,13 @@
 					<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="43"/>
 					<ExtendedTooltip name="ТоварыКоличествоРасширеннаяПодсказка" id="44"/>
 				</InputField>
+				<InputField name="ТоварыЦена" id="121">
+					<DataPath>Объект.Товары.Цена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="122"/>
+					<ExtendedTooltip name="ТоварыЦенаРасширеннаяПодсказка" id="123"/>
+				</InputField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
