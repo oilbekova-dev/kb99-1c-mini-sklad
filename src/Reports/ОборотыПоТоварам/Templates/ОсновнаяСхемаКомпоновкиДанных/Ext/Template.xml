@@ -9,24 +9,6 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КоличествоКонечныйОстаток</dataPath>
 			<field>КоличествоКонечныйОстаток</field>
-			<role>
-				<dcscom:balance>true</dcscom:balance>
-				<dcscom:balanceGroupName>Количество</dcscom:balanceGroupName>
-				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоНачальныйОстаток</dataPath>
-			<field>КоличествоНачальныйОстаток</field>
-			<role>
-				<dcscom:balance>true</dcscom:balance>
-				<dcscom:balanceGroupName>Количество</dcscom:balanceGroupName>
-				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоПриход</dataPath>
-			<field>КоличествоПриход</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Товар</dataPath>
@@ -36,10 +18,6 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоРасход</dataPath>
-			<field>КоличествоРасход</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Партия</dataPath>
 			<field>Партия</field>
 			<role>
@@ -47,72 +25,36 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СтоимостьРасход</dataPath>
-			<field>СтоимостьРасход</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>СтоимостьПриход</dataPath>
-			<field>СтоимостьПриход</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>СтоимостьКонечныйОстаток</dataPath>
 			<field>СтоимостьКонечныйОстаток</field>
-			<role>
-				<dcscom:balance>true</dcscom:balance>
-				<dcscom:balanceGroupName>Стоимость</dcscom:balanceGroupName>
-				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
-			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СтоимостьНачальныйОстаток</dataPath>
-			<field>СтоимостьНачальныйОстаток</field>
-			<role>
-				<dcscom:balance>true</dcscom:balance>
-				<dcscom:balanceGroupName>Стоимость</dcscom:balanceGroupName>
-				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
-			</role>
+			<dataPath>ДатаПартии</dataPath>
+			<field>ДатаПартии</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата партии</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ	ОстаткиТоваровОстаткиИОбороты.Товар КАК Товар,	ОстаткиТоваровОстаткиИОбороты.Партия КАК Партия,	ОстаткиТоваровОстаткиИОбороты.КоличествоНачальныйОстаток КАК КоличествоНачальныйОстаток,	ОстаткиТоваровОстаткиИОбороты.СтоимостьНачальныйОстаток КАК СтоимостьНачальныйОстаток,	ОстаткиТоваровОстаткиИОбороты.КоличествоПриход КАК КоличествоПриход,	ОстаткиТоваровОстаткиИОбороты.СтоимостьПриход КАК СтоимостьПриход,	ОстаткиТоваровОстаткиИОбороты.КоличествоРасход КАК КоличествоРасход,	ОстаткиТоваровОстаткиИОбороты.СтоимостьРасход КАК СтоимостьРасход,	ОстаткиТоваровОстаткиИОбороты.КоличествоКонечныйОстаток КАК КоличествоКонечныйОстаток,	ОстаткиТоваровОстаткиИОбороты.СтоимостьКонечныйОстаток КАК СтоимостьКонечныйОстатокИЗ	РегистрНакопления.ОстаткиТоваров.ОстаткиИОбороты КАК ОстаткиТоваровОстаткиИОбороты</query>
+		<query>ВЫБРАТЬ	ТоварыОстатки.Товар КАК Товар,	ТоварыОстатки.Партия КАК Партия,	ТоварыОстатки.Партия.Дата КАК ДатаПартии,	ЕСТЬNULL(ТоварыОстатки.КоличествоОстаток, 0) КАК КоличествоКонечныйОстаток,	ЕСТЬNULL(ТоварыОстатки.СтоимостьОстаток, 0) КАК СтоимостьКонечныйОстатокИЗ	РегистрНакопления.ОстаткиТоваров.Остатки(&amp;ПериодКон, ) КАК ТоварыОстатки</query>
 	</dataSet>
-	<totalField>
-		<dataPath>КоличествоНачальныйОстаток</dataPath>
-		<expression>Сумма(КоличествоНачальныйОстаток)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>КоличествоПриход</dataPath>
-		<expression>Сумма(КоличествоПриход)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>КоличествоРасход</dataPath>
-		<expression>Сумма(КоличествоРасход)</expression>
-	</totalField>
 	<totalField>
 		<dataPath>КоличествоКонечныйОстаток</dataPath>
 		<expression>Сумма(КоличествоКонечныйОстаток)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>СтоимостьНачальныйОстаток</dataPath>
-		<expression>Сумма(СтоимостьНачальныйОстаток)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>СтоимостьПриход</dataPath>
-		<expression>Сумма(СтоимостьПриход)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>СтоимостьРасход</dataPath>
-		<expression>Сумма(СтоимостьРасход)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>СтоимостьКонечныйОстаток</dataPath>
 		<expression>Сумма(СтоимостьКонечныйОстаток)</expression>
 	</totalField>
 	<parameter>
-		<name>НачалоПериода</name>
+		<name>Период</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Начало периода</v8:content>
+				<v8:content>Период</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -122,14 +64,32 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>false</useRestriction>
+		<useRestriction>true</useRestriction>
 	</parameter>
 	<parameter>
-		<name>КонецПериода</name>
+		<name>ПериодКон</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Конец периода</v8:content>
+				<v8:content>Период кон</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>КонецПериода(&amp;ДатаОтчета, "ДЕНЬ")</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата отчета</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -177,18 +137,6 @@
 					<dcsset:field>СтоимостьКонечныйОстаток</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
-			<dcsset:dataParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>НачалоПериода</dcscor:parameter>
-					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
-					<dcsset:userSettingID>acb69d54-1515-41e5-b37b-4f33a3ff03b9</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>КонецПериода</dcscor:parameter>
-					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
-					<dcsset:userSettingID>d8a30e02-08bb-448a-bb19-3149fcaa6b41</dcsset:userSettingID>
-				</dcscor:item>
-			</dcsset:dataParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
