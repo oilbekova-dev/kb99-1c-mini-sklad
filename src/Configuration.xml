@@ -260,6 +260,14 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>МиниСклад</Subsystem>
+			<Role>Администратор</Role>
+			<Role>Директор</Role>
+			<Role>Менеджер</Role>
+			<Role>Кладовщик</Role>
+			<Role>Бухгалтер</Role>
+			<CommonModule>РегламентныеПроцедуры</CommonModule>
+			<ScheduledJob>ОбновлениеИндекса</ScheduledJob>
+			<ScheduledJob>СлияниеИндексов</ScheduledJob>
 			<Catalog>Товары</Catalog>
 			<Catalog>Контрагенты</Catalog>
 			<Document>Поступление</Document>
