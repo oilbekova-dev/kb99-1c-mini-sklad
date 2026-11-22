@@ -109,6 +109,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.Реализация.TabularSection.Товары.Attribute.Товар</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.Реализация.Command.Печать</name>
 		<right>
 			<name>View</name>
@@ -122,71 +133,20 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
-	</object>
-	<object>
-		<name>Catalog.Товары.StandardAttribute.PredefinedDataName</name>
 		<right>
 			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.Товары.StandardAttribute.Predefined</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.Товары.StandardAttribute.Ref</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.Товары.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.Товары.StandardAttribute.IsFolder</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.Товары.StandardAttribute.Owner</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.Товары.StandardAttribute.Parent</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.Товары.StandardAttribute.Description</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.Товары.StandardAttribute.Code</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -264,6 +224,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.Реализация.TabularSection.Товары</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.Поступление</name>
 		<right>
 			<name>Read</name>
@@ -289,37 +260,17 @@
 			<name>View</name>
 			<value>true</value>
 		</right>
-	</object>
-	<object>
-		<name>Document.Поступление.StandardAttribute.Posted</name>
 		<right>
 			<name>Edit</name>
-			<value>false</value>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>Document.Поступление.StandardAttribute.Ref</name>
+		<name>Document.Реализация.TabularSection.Товары.Attribute.Сумма</name>
 		<right>
-			<name>Edit</name>
+			<name>View</name>
 			<value>false</value>
 		</right>
-	</object>
-	<object>
-		<name>Document.Поступление.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.Поступление.StandardAttribute.Date</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.Поступление.StandardAttribute.Number</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -392,18 +343,22 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.Реализация</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
+		<name>Document.Реализация.Attribute.Контрагент</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Document.Реализация.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -412,12 +367,20 @@
 	<object>
 		<name>Document.Реализация.StandardAttribute.Ref</name>
 		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Document.Реализация.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -426,12 +389,42 @@
 	<object>
 		<name>Document.Реализация.StandardAttribute.Date</name>
 		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Document.Реализация.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Реализация.TabularSection.Товары.Attribute.Цена</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.Реализация.TabularSection.Товары.Attribute.Количество</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
