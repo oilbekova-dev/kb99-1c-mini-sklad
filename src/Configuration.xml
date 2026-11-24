@@ -260,11 +260,21 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>МиниСклад</Subsystem>
+			<Role>Менеджер</Role>
+			<Role>Кладовщик</Role>
+			<Role>Бухгалтер</Role>
+			<Role>Администратор</Role>
+			<Role>Директор</Role>
+			<CommonModule>РегламентныеПроцедуры</CommonModule>
+			<HTTPService>ОбменТоварами</HTTPService>
+			<ScheduledJob>ОбновлениеИндекса</ScheduledJob>
+			<ScheduledJob>СлияниеИндексов</ScheduledJob>
 			<Catalog>Товары</Catalog>
 			<Catalog>Контрагенты</Catalog>
 			<Document>Поступление</Document>
 			<Document>Реализация</Document>
 			<Report>ОборотыПоТоварам</Report>
+			<DataProcessor>ИмитацияОбменаJSON</DataProcessor>
 			<AccumulationRegister>ОстаткиТоваров</AccumulationRegister>
 			<AccumulationRegister>Продажи</AccumulationRegister>
 		</ChildObjects>
